@@ -27,5 +27,7 @@ urlpatterns = [
     path('users/', include('users.urls')),#Users
 
     path('products/', include('products.urls')),#Products
+
+    path('orders/', include('orders.urls')),#Orders
     
 ]
