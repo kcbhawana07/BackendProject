@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
-from .models import Product
-from .serializers import ProductSerializer
+from rest_framework.decorators import api_view#converts function into API
+from rest_framework.response import Response#sends JSON response
+from .models import Product#your database model
+from .serializers import ProductSerializer#converts model ↔ JSON
 
 # Create your views here.
 

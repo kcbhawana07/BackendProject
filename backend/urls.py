@@ -21,9 +21,19 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),  # JWT Auth
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),  # JWT Auth
-
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),  # JWT Auth creates a login endpoint
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),  # JWT Auth creates a token refresh endpoint
+#
     path('users/', include('users.urls')),#Users
     
+    path('products/', include('products.urls')),#Products
+
+    path('orders/', include('orders.urls')),#Orders
 ]
+
+##Simple Summary (Exam Ready)
+#api/token/ → login API (get tokens)
+#api/token/refresh/ → get new access token
+#.as_view() → converts class view to function
+#Access token → used to access APIs
+#Refresh token → used to renew access token
