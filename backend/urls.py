@@ -25,5 +25,7 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),  # JWT Auth
 
     path('users/', include('users.urls')),#Users
+
+    path('products/', include('products.urls')),#Products
     
 ]
