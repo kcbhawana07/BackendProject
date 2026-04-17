@@ -4,7 +4,7 @@ from .serializers import RegisterSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView #for login
 from rest_framework_simplejwt.tokens import RefreshToken #for logouts
 from rest_framework.views import APIView#class based 
-
+from rest_framework import status
 
 @api_view(['POST'])
 def register(request):

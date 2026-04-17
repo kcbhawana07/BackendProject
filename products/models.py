@@ -8,4 +8,4 @@ class Product(models.Model):
     stock = models.IntegerField()
 
     def __str__(self):
-        return self.name
+        return self.name 
